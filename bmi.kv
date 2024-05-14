@@ -1,0 +1,48 @@
+<UI>:
+    id:scr_manager
+    MainScreen:
+    LoginScreen:
+<LoginScreen>:
+    name: "login_scr"
+    BoxLayout:
+        orientation: 'vertical'
+        GridLayout:
+            cols: 1
+            TextInput:
+                id:txt_height
+                hint_text: "input heigth"
+                size_hint: (0.35, 0.1)
+            TextInput:
+                id:txt_weight
+                hint_text: "input weigth"
+                size_hint: (0.35, 0.1)
+            Button:
+                id:btn_bmi
+                text: 'Btn_bmi'
+                pos_hint: {'x': 0.25, 'y': 0.60}
+                size_hint: (0.35, 0.1)
+                height: 30
+                font_size: 30
+            Label:
+                id:lbl_bmi
+                text: 'lbl_bmi = '
+                pos_hint: {'x': 0.25, 'y': 0.80}
+                size_hint: (0.35, 0.1)
+                height: 30
+                font_size: 30
+                #on_press: root.submit_text(btn1.text)
+###########################
+<MainScreen>:
+    name: "Main_scr"
+    BoxLayout:    
+        orientation: 'vertical'
+        Image:
+            source: "1.jpg"
+        Button:
+            text: 'คำนวน'
+            pos_hint: {'x': 0.25, 'y': 0.6}
+            size_hint: (0.5, None)
+            height: 30
+            font_size: 25
+            font_name: 'tahoma'
+            on_press: app.root.current ="login_scr"
